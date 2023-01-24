@@ -42,13 +42,18 @@ namespace osuprofile
 
         static void ReadFile(string username, bool chooseDecimal)
         {
-            using (var sr = new StreamReader(@"e:\test.csv"))
+            string csvFile = "";
+            Console.WriteLine("name of csv file");
+            csvFile = Console.ReadLine();
+            using (var sr = new StreamReader(@"e:\" + csvFile + ".csv"))
             {
                 double weighted = 0;
                 int i = 0;
                 int decimalCount = 0;
-                
-                Console.WriteLine("\n" + username);
+                int playsCount = 0;
+
+                Console.WriteLine("how many plays to display 1-100");
+                playsCount = Convert.ToInt32(Console.ReadLine());
 
                 var plays = sr.ReadToEnd()
                     .Split('\n')
@@ -59,7 +64,8 @@ namespace osuprofile
                 Array.Reverse(plays);
                 if(chooseDecimal == false)
                 {
-                    foreach (var play in plays)
+                    Console.WriteLine("\n" + username);
+                    foreach (var play in plays.Take(playsCount))
                     {
                         if(i == 0)
                         {
@@ -78,7 +84,8 @@ namespace osuprofile
                 {
                     Console.WriteLine("how many decimal places");
                     decimalCount = Convert.ToInt32(Console.ReadLine());
-                    foreach (var play in plays) 
+                    Console.WriteLine("\n" + username);
+                    foreach (var play in plays.Take(playsCount)) 
                     {
                         if(i == 0)
                         {
