@@ -11,3 +11,16 @@ D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.csproj.CoreCompil
 D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.dll
 D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.pdb
 D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.genruntimeconfig.cache
+D:\GitKraken\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.exe
+D:\GitKraken\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.deps.json
+D:\GitKraken\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.runtimeconfig.json
+D:\GitKraken\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.runtimeconfig.dev.json
+D:\GitKraken\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.dll
+D:\GitKraken\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.pdb
+D:\GitKraken\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.csprojAssemblyReference.cache
+D:\GitKraken\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.AssemblyInfoInputs.cache
+D:\GitKraken\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.AssemblyInfo.cs
+D:\GitKraken\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.csproj.CoreCompileInputs.cache
+D:\GitKraken\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.dll
+D:\GitKraken\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.pdb
+D:\GitKraken\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.genruntimeconfig.cache

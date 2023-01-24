@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -11,17 +10,43 @@ namespace osuprofile
         {
             Console.WriteLine("username:");
             string username = Console.ReadLine();
-            ReadFile(username);
+            ChooseDecimal(username);
             Console.ReadKey();
         }
 
-        static void ReadFile(string username)
+        static void ChooseDecimal(string username)
+        {
+            
+            bool chooseDecimal = false;
+
+            Console.WriteLine("decimal points? y/n");
+            string decimalChoice = Console.ReadLine();
+            if (decimalChoice == "y")
+            {
+                chooseDecimal = true;
+                ReadFile(username, chooseDecimal);
+            }
+            else if (decimalChoice == "n")
+            {
+                chooseDecimal = false;
+                ReadFile(username, chooseDecimal);
+            }
+            else
+            {
+                Console.WriteLine("y or n only");
+                System.Environment.Exit(1);
+            }
+        }
+
+        static void ReadFile(string username, bool chooseDecimal)
         {
             using (var sr = new StreamReader(@"e:\test.csv"))
             {
                 double weighted = 0;
                 int i = 0;
-                List<double> weightedPlays = new List<double>();
+                
+                
+                Console.WriteLine("\n" + username);
 
                 var plays = sr.ReadToEnd()
                     .Split('\n')
@@ -30,11 +55,23 @@ namespace osuprofile
                     .ToArray<int>();
                 Array.Sort(plays);
                 Array.Reverse(plays);
-                foreach (var play in plays)
+                if(chooseDecimal == true)
                 {
-                    weighted = play * Math.Pow(0.95, i - 1);
-                    Console.WriteLine(weighted);
-                    ++i;
+                    foreach (var play in plays)
+                    {
+                        weighted = play * Math.Pow(0.95, i - 1);
+                        Console.WriteLine(Convert.ToInt32(weighted));
+                        ++i;
+                    }
+                }
+                else if (chooseDecimal == false)
+                {
+                    foreach (var play in plays)
+                    {
+                        weighted = play * Math.Pow(0.95, i - 1);
+                        Console.WriteLine(weighted);
+                        ++i;
+                    }
                 }
             }
         }
