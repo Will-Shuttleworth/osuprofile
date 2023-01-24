@@ -36,6 +36,8 @@ namespace osuprofile
                 Console.WriteLine("y or n only");
                 System.Environment.Exit(1);
             }
+
+
         }
 
         static void ReadFile(string username, bool chooseDecimal)
@@ -44,6 +46,7 @@ namespace osuprofile
             {
                 double weighted = 0;
                 int i = 0;
+                
                 
                 
                 Console.WriteLine("\n" + username);
@@ -55,22 +58,38 @@ namespace osuprofile
                     .ToArray<int>();
                 Array.Sort(plays);
                 Array.Reverse(plays);
-                if(chooseDecimal == true)
+                if(chooseDecimal == false)
                 {
                     foreach (var play in plays)
                     {
-                        weighted = play * Math.Pow(0.95, i - 1);
-                        Console.WriteLine(Convert.ToInt32(weighted));
-                        ++i;
+                        if(i == 0)
+                        {
+                            Console.WriteLine(play);
+                            ++i;
+                        }
+                        else
+                        {
+                            weighted = play * Math.Pow(0.95, i - 1);
+                            Console.WriteLine(Convert.ToInt32(weighted));
+                            ++i;
+                        }
                     }
                 }
-                else if (chooseDecimal == false)
+                else if (chooseDecimal == true)
                 {
                     foreach (var play in plays)
                     {
-                        weighted = play * Math.Pow(0.95, i - 1);
-                        Console.WriteLine(weighted);
-                        ++i;
+                        if(i == 0)
+                        {
+                            Console.WriteLine(play);
+                            ++i;
+                        }
+                        else
+                        {
+                            weighted = play * Math.Pow(0.95, i - 1);
+                            Console.WriteLine(weighted);
+                            ++i;
+                        }
                     }
                 }
             }
