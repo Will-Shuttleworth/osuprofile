@@ -1,0 +1,13 @@
+D:\Visual Studio\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.exe
+D:\Visual Studio\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.deps.json
+D:\Visual Studio\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.runtimeconfig.json
+D:\Visual Studio\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.runtimeconfig.dev.json
+D:\Visual Studio\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.dll
+D:\Visual Studio\osuprofile\bin\Debug\netcoreapp3.1\osuprofile.pdb
+D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.csprojAssemblyReference.cache
+D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.AssemblyInfoInputs.cache
+D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.AssemblyInfo.cs
+D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.csproj.CoreCompileInputs.cache
+D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.dll
+D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.pdb
+D:\Visual Studio\osuprofile\obj\Debug\netcoreapp3.1\osuprofile.genruntimeconfig.cache
