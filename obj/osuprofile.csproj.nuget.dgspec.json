@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Visual Studio\\osuprofile\\osuprofile.csproj": {}
+    "D:\\GitKraken\\osuprofile\\osuprofile.csproj": {}
   },
   "projects": {
-    "D:\\Visual Studio\\osuprofile\\osuprofile.csproj": {
+    "D:\\GitKraken\\osuprofile\\osuprofile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Studio\\osuprofile\\osuprofile.csproj",
+        "projectUniqueName": "D:\\GitKraken\\osuprofile\\osuprofile.csproj",
         "projectName": "osuprofile",
-        "projectPath": "D:\\Visual Studio\\osuprofile\\osuprofile.csproj",
+        "projectPath": "D:\\GitKraken\\osuprofile\\osuprofile.csproj",
         "packagesPath": "C:\\Users\\Will\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Studio\\osuprofile\\obj\\",
+        "outputPath": "D:\\GitKraken\\osuprofile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Will\\AppData\\Roaming\\NuGet\\NuGet.Config",

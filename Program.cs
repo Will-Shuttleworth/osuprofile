@@ -31,11 +31,11 @@ namespace osuprofile
                 Array.Sort(plays);
                 Array.Reverse(plays);
                 foreach (var play in plays)
-                    // p * 0.95^(n-1)
+                {
                     weighted = play * Math.Pow(0.95, i - 1);
                     Console.WriteLine(weighted);
                     ++i;
-                    
+                }
             }
         }
     }
