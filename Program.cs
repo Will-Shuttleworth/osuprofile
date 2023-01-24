@@ -46,8 +46,7 @@ namespace osuprofile
             {
                 double weighted = 0;
                 int i = 0;
-                
-                
+                int decimalCount = 0;
                 
                 Console.WriteLine("\n" + username);
 
@@ -77,7 +76,9 @@ namespace osuprofile
                 }
                 else if (chooseDecimal == true)
                 {
-                    foreach (var play in plays)
+                    Console.WriteLine("how many decimal places");
+                    decimalCount = Convert.ToInt32(Console.ReadLine());
+                    foreach (var play in plays) 
                     {
                         if(i == 0)
                         {
@@ -87,7 +88,7 @@ namespace osuprofile
                         else
                         {
                             weighted = play * Math.Pow(0.95, i - 1);
-                            Console.WriteLine(weighted);
+                            Console.WriteLine(Math.Round(weighted, decimalCount));
                             ++i;
                         }
                     }
