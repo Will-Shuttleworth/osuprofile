@@ -21,23 +21,22 @@ namespace osuprofile
 
             Console.WriteLine("decimal points? y/n");
             string decimalChoice = Console.ReadLine();
-            if (decimalChoice == "y")
-            {
-                chooseDecimal = true;
-                ReadFile(username, chooseDecimal);
-            }
-            else if (decimalChoice == "n")
-            {
-                chooseDecimal = false;
-                ReadFile(username, chooseDecimal);
-            }
-            else
-            {
-                Console.WriteLine("y or n only");
-                System.Environment.Exit(1);
-            }
 
-
+            switch (decimalChoice)
+            {
+                case "y":
+                    chooseDecimal = true;
+                    ReadFile(username, chooseDecimal);
+                    break;
+                case "n":
+                    chooseDecimal = false;
+                    ReadFile(username, chooseDecimal);
+                    break;
+                default:
+                    Console.WriteLine("y or n only");
+                    System.Environment.Exit(1);
+                    break;
+            }
         }
 
         static void ReadFile(string username, bool chooseDecimal)
@@ -62,43 +61,51 @@ namespace osuprofile
                     .ToArray<int>();
                 Array.Sort(plays);
                 Array.Reverse(plays);
-                if(chooseDecimal == false)
+
+                switch (chooseDecimal)
                 {
-                    Console.WriteLine("\n" + username);
-                    foreach (var play in plays.Take(playsCount))
-                    {
-                        if(i == 0)
+                    case true:
+                        
+                        Console.WriteLine("how many decimal places");
+                        decimalCount = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("\n" + username);
+                        foreach (var play in plays.Take(playsCount))
                         {
-                            Console.WriteLine(play);
-                            ++i;
+                            switch (i)
+                            {
+                                case 0:
+                                    Console.WriteLine(play);
+                                    ++i;
+                                    break;
+                                default:
+                                    weighted = play * Math.Pow(0.95, i - 1);
+                                    Console.WriteLine(Math.Round(weighted, decimalCount));
+                                    ++i;
+                                    break;
+                            }
                         }
-                        else
+
+                        break;
+
+                    case false:
+                        
+                        Console.WriteLine("\n" + username);
+                        foreach (var play in plays.Take(playsCount))
                         {
-                            weighted = play * Math.Pow(0.95, i - 1);
-                            Console.WriteLine(Convert.ToInt32(weighted));
-                            ++i;
+                            switch (i)
+                            {
+                                case 0:
+                                    Console.WriteLine(play);
+                                    ++i;
+                                    break;
+                                default:
+                                    weighted = play * Math.Pow(0.95, i - 1);
+                                    Console.WriteLine(Convert.ToInt32(weighted));
+                                    ++i;
+                                    break;
+                            }
                         }
-                    }
-                }
-                else if (chooseDecimal == true)
-                {
-                    Console.WriteLine("how many decimal places");
-                    decimalCount = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("\n" + username);
-                    foreach (var play in plays.Take(playsCount)) 
-                    {
-                        if(i == 0)
-                        {
-                            Console.WriteLine(play);
-                            ++i;
-                        }
-                        else
-                        {
-                            weighted = play * Math.Pow(0.95, i - 1);
-                            Console.WriteLine(Math.Round(weighted, decimalCount));
-                            ++i;
-                        }
-                    }
+                        break;
                 }
             }
         }
